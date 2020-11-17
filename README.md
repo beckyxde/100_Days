@@ -42,10 +42,10 @@ The App Brewery was designed to make learning to program fun and accessible. Its
 - Snake Game
 - Pong Game
 - Auto Swipe on Tinder
-- Auto Job Applications on LinkedIn
-- Automate Birthday Emails/SMS
+- LinkedIn Job Application Automation
+- Birthday Emails/SMS Automation
 - Fully Fledged Blog Website
-- Build Your Own Public API
+- Self-built Public API
 - Data Science with Google Trends
 - Analysing Lego Datasets
 - Google App Store Analysis
