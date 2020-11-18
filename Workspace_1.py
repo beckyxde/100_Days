@@ -295,6 +295,3 @@ print(number_of_students)
 
 avg_height = round(total_height/number_of_students)
 print(avg_height)
-
-
-# Password generator
