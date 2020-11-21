@@ -54,3 +54,9 @@ The App Brewery was designed to make learning to program fun and accessible. Its
 
 https://github.com/appbrewery/100-days-of-python
 https://www.appbrewery.co/
+
+## Useful sites
+
+https://reeborg.ca/index_en.html
+https://ascii.co.uk/art
+https://haveibeenpwned.com/
