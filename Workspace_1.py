@@ -1,5 +1,4 @@
 
-# https://github.com/appbrewery/100-days-of-python
 # Day 1 - Band Name Generator
 
 import random
@@ -340,3 +339,73 @@ for char in password_list:
     password += char
 
 print(f"Your password is: {password}")
+
+# Day 6
+# https://reeborg.ca/index_en.html
+# Hurdle 3
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+
+# Hurdle 4
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+
+    turn_left()
+
+
+while not at_goal():
+    if wall_in_front:
+        jump()
+    else:
+        move()
+
+# Maze
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+while front_is_clear():
+   move()
+turn_left()
+    
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear():
+        move()
+    else:
+        turn_left()
