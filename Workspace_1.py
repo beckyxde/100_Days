@@ -1,6 +1,8 @@
 
 # Day 1 - Band Name Generator
 
+from hangman_art import logo
+from hangman_words import word_list
 import random
 print("Welcome to the 'Band Name Generator'")
 city = input("Which city did you grow up in?\n")
@@ -343,6 +345,8 @@ print(f"Your password is: {password}")
 # Day 6
 # https://reeborg.ca/index_en.html
 # Hurdle 3
+
+
 def turn_right():
     turn_left()
     turn_left()
@@ -366,6 +370,8 @@ while not at_goal():
         move()
 
 # Hurdle 4
+
+
 def turn_right():
     turn_left()
     turn_left()
@@ -392,15 +398,18 @@ while not at_goal():
         move()
 
 # Maze
+
+
 def turn_right():
     turn_left()
     turn_left()
     turn_left()
 
+
 while front_is_clear():
-   move()
+    move()
 turn_left()
-    
+
 while not at_goal():
     if right_is_clear():
         turn_right()
@@ -409,3 +418,51 @@ while not at_goal():
         move()
     else:
         turn_left()
+
+# Day 7 - Hangman
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
+
+end_of_game = False
+lives = 6
+
+print(logo)
+
+#print(f'Pssst, the solution is {chosen_word}.')
+
+# Create blanks
+display = []
+for _ in range(word_length):
+    display += "_"
+
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
+
+    if guess in display:
+        print(f"You've already guessed {guess}")
+
+    # Check guessed letter
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = letter
+
+    # Check if user is wrong.
+    if guess not in chosen_word:
+        print(f"You guessed {guess}, that's not in the word. You lose a life.")
+
+        lives -= 1
+        if lives == 0:
+            end_of_game = True
+            print("You lose.")
+
+    # Join all the elements in the list and turn it into a String.
+    print(f"{' '.join(display)}")
+
+    # Check if user has got all letters.
+    if "_" not in display:
+        end_of_game = True
+        print("You win.")
+
+    from hangman_art import stages
+    print(stages[lives])
