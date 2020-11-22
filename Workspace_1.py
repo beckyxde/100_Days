@@ -1,9 +1,9 @@
-
-# Day 1 - Band Name Generator
-
 from hangman_art import logo
 from hangman_words import word_list
 import random
+
+# Day 1 - Band Name Generator
+
 print("Welcome to the 'Band Name Generator'")
 city = input("Which city did you grow up in?\n")
 pet = input("What is the name of a pet that you've owned?\n")
