@@ -2,6 +2,7 @@
 
 # Day 1 - Band Name Generator
 
+import math
 from art import logo
 from hangman_art import logo, stages
 from hangman_words import word_list
@@ -466,7 +467,23 @@ while not end_of_game:
     from hangman_art import stages
     print(stages[lives])
 
-# Day 8 - Ceasar Cipher
+# Day 8
+# Practice Exercise - PaintArea Calculator
+
+
+def paint_calc(height, width, cover):
+    num_cans = (height * width) / cover
+    round_up_cans = math.ceil(num_cans)
+    print(f"You'll need {round_up_cans} cans of paint.")
+
+
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
+
+
+# Ceasar Cipher
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
             'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
