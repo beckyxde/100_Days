@@ -1,12 +1,14 @@
-
-
-# Day 1 - Band Name Generator
-
 import math
 from art import logo
 from hangman_art import logo, stages
 from hangman_words import word_list
+from gestures import rock, paper, scissors
+from treasure_island import shark, treasure
+from replit import clear
 import random
+
+# Day 1 - Band Name Generator
+
 print("Welcome to the 'Band Name Generator'")
 city = input("Which city did you grow up in?\n")
 pet = input("What is the name of a pet that you've owned?\n")
@@ -122,29 +124,7 @@ if direction == "left":
             horse = input(
                 "A horse draw carriage arrives. Do you want to 'get inside' or 'stay put'?\n")
             if horse == "get inside":
-                print('''   ||====================================================================||
-   ||//$\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//$\\||
-   ||(100)==================| FEDERAL RESERVE NOTE |================(100)||
-   ||\\$//        ~         '------========--------'                \\$//||
-   ||<< /        /$\              // ____ \\                         \ >>||
-   ||>>|  12    //L\\            // ///..) \\         L38036133B   12 |<<||
-   ||<<|        \\ //           || <||  >\  ||                        |>>||
-   ||>>|         \$/            ||  $$ --/  ||        One Hundred     |<<||
-||====================================================================||>||
-||//$\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//$\\||<||
-||(100)==================| FEDERAL RESERVE NOTE |================(100)||>||
-||\\$//        ~         '------========--------'                \\$//||\||
-||<< /        /$\              // ____ \\                         \ >>||)||
-||>>|  12    //L\\            // ///..) \\         L38036133B   12 |<<||/||
-||<<|        \\ //           || <||  >\  ||                        |>>||=||
-||>>|         \$/            ||  $$ --/  ||        One Hundred     |<<||
-||<<|      L38036133B        *\\  |\_/  //* series                 |>>||
-||>>|  12                     *\\/___\_//*   1989                  |<<||
-||<<\      Treasurer     ______/Franklin\________     Secretary 12 />>||
-||//$\                 ~|UNITED STATES OF AMERICA|~               /$\\||
-||(100)===================  ONE HUNDRED DOLLARS =================(100)||
-||\\$//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\$//||
-||====================================================================||''')
+                print(treasure)
                 print(
                     "The coachman knows where the treasure is and will take you there.")
                 print("Congradulations, you've won the game.")
@@ -152,19 +132,7 @@ if direction == "left":
                 print("You've been struck by lightning. Game over.")
     else:
         print("You have been eaten by a shark. Game over")
-        print('''
-
-                     ^`.                     o
-     ^_              \  \                  o  o
-     \ \             {   \                 o
-     {  \           /     `~~~--__
-     {   \___----~~'              `~~-_     ______          _____
-      \                         /// a  `~._(_||___)________/___
-      / /~~~~-, ,__.    ,      ///  __,,,,)      o  ______/    \
-      \/      \/    `~~~;   ,---~~-_`~= \ \------o-'            \
-                       /   /            / /
-                      '._.'           _/_/
-                                      ';|''')
+        print(shark)
 else:
     print("You've fallen in a hole. Game over.")
 
@@ -349,77 +317,76 @@ print(f"Your password is: {password}")
 # https://reeborg.ca/index_en.html
 # Hurdle 3
 
-
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
-
-
-def jump():
-    turn_left()
-    move()
-    turn_right()
-    move()
-    turn_right()
-    move()
-    turn_left()
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
 
 
-while not at_goal():
-    if wall_in_front():
-        jump()
-    else:
-        move()
-
-# Hurdle 4
-
-
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+# def jump():
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
 
 
-def jump():
-    turn_left()
-    while wall_on_right():
-        move()
-    turn_right()
-    move()
-    turn_right()
-    while front_is_clear():
-        move()
-    turn_left()
+# while not at_goal():
+#     if wall_in_front():
+#         jump()
+#     else:
+#         move()
+
+# # Hurdle 4
 
 
-while not at_goal():
-    if wall_in_front:
-        jump()
-    else:
-        move()
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+
+# def jump():
+#     turn_left()
+#     while wall_on_right():
+#         move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     while front_is_clear():
+#         move()
+#     turn_left()
+
+
+# while not at_goal():
+#     if wall_in_front:
+#         jump()
+#     else:
+#         move()
 
 # Maze
 
 
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
 
 
-while front_is_clear():
-    move()
-turn_left()
+# while front_is_clear():
+#     move()
+# turn_left()
 
-while not at_goal():
-    if right_is_clear():
-        turn_right()
-        move()
-    elif front_is_clear():
-        move()
-    else:
-        turn_left()
+# while not at_goal():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
 
 # Day 7 - Hangman
 chosen_word = random.choice(word_list)
@@ -464,7 +431,6 @@ while not end_of_game:
         end_of_game = True
         print("You win.")
 
-    from hangman_art import stages
     print(stages[lives])
 
 # Day 8
@@ -550,3 +516,5 @@ while not bidding_finished:
         find_highest_bidder(bids)
     elif should_continue == "yes":
         clear()
+
+# Day 10 - Calculator App
