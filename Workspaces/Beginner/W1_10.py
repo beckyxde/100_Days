@@ -1,11 +1,11 @@
 import math
 import random
 from replit import clear
-from art import logo
-from hangman_art import logo, stages
+from ascii.art import logo1, logo2, logo3, logo4
+from ascii.hangman_art import logo, stages
 from hangman_words import word_list
-from gestures import rock, paper, scissors
-from treasure_island import shark, treasure
+from ascii.gestures import rock, paper, scissors
+from ascii.treasure_island import shark, treasure
 
 # Day 1 - Band Name Generator
 
@@ -517,9 +517,38 @@ while not bidding_finished:
     elif should_continue == "yes":
         clear()
 
-# Day 10 - Calculator App
+# Day 10 -
+# Exercise - Leap Year Calculator
 
 
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        return True
+    else:
+        return False
+
+
+def days_in_month(year, month):
+    # if month > 12 or month < 1:
+    # return "Invalid month"
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if is_leap(year) and month == 2:
+        return 29
+    return month_days[month - 1]
+
+
+year = int(input("Enter a year: "))
+month = int(input("Enter a month: "))
+days = days_in_month(year, month)
+print(days)
+
+
+# Calculator App
 def add(n1, n2):
     return n1 + n2
 
