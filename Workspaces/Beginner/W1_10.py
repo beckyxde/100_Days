@@ -1,11 +1,10 @@
 import math
 import random
-from replit import clear
-from ascii.art import logo1, logo2, logo3, logo4
-from ascii.hangman_art import logo, stages
+from art import logo1, logo2, logo3, logo4
+from hangman_art import logo, stages
 from hangman_words import word_list
-from ascii.gestures import rock, paper, scissors
-from ascii.treasure_island import shark, treasure
+from gestures import rock, paper, scissors
+from treasure_island import shark, treasure
 
 # Day 1 - Band Name Generator
 
