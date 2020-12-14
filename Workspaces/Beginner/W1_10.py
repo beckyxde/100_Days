@@ -1,6 +1,6 @@
 import math
 import random
-from art import logo1, logo2, logo3, logo4
+from art_caesar_C import logo1, logo2, logo3, logo4
 from hangman_art import logo, stages
 from hangman_words import word_list
 from gestures import rock, paper, scissors
