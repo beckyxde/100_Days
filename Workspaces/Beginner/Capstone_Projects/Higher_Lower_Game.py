@@ -10,7 +10,8 @@ def get_random_account():
 
 
 def format_data(account):
-    """Format account into printable format: name, description and country"""
+    """Takes the account data and returns the printable format: 
+    name, description and country"""
     name = account["name"]
     description = account["description"]
     country = account["country"]
