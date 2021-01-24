@@ -1,10 +1,10 @@
 PLACEHOLDER = "[name]"
 
 
-with open("./Input/Names/invited_names.txt") as names_file:
+with open("Input/Names/invited_names.txt") as names_file:
     names = names_file.readlines()
 
-with open("./Input/Letters/starting_letter.txt") as letter_file:
+with open("Input/Letters/starting_letter.txt") as letter_file:
     letter_contents = letter_file.read()
     for name in names:
         stripped_name = name.strip()
